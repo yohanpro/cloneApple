@@ -1,22 +1,26 @@
 /** 
  * Generic
  */
+
+@import '../variables';
+
 html {
   font-size: $typographic-root-font-size;
 }
 
 body {
   margin: 0;
-  font-family: $noto-font-family;
-  color: $noto-base-font-color;
+  font-family: $typographic-font-family;
+  color: $typographic-base-font-color;
   line-height: $typographic-base-line-height;
-  font-size: $noto-base-font-size;
+  font-size: $typographic-base-font-size;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-break: keep-all;
+  background-color: $color-bg;
 }
 
 h1,
@@ -25,12 +29,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $noto-font-family;
+  font-family: $typographic-font-family;
   font-weight: 600;
 }
 
 h1 {
-  font-size: $noto-base-font-size * 2.5;
+  font-size: $typographic-base-font-size * 2.5;
   @include line-height(2);
   @include margin-top(4);
   @include margin-bottom(1);
@@ -65,7 +69,7 @@ h5 {
 }
 
 h6 {
-  font-size: $noto-base-font-size;
+  font-size: $typographic-base-font-size;
   @include line-height(1);
   @include margin-top(2.5);
   @include margin-bottom(.5);
@@ -93,13 +97,13 @@ hr {
 }
 
 a {
-  color: $noto-link-p-font-color;
+  color: $typographic-link-p-font-color;
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
-    color: $noto-link-s-font-color;
+    color: $typographic-link-s-font-color;
   }
 
 }
@@ -150,6 +154,11 @@ figcaption {
 .anchor {
   margin-left: -30px !important;
   padding-right: 14px !important;
+}
+
+.App {
+  background-color: $color-bg;
+  min-height: 100vh;
 }
 
 @include breakpoint-sm {

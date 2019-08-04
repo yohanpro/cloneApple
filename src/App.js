@@ -5,8 +5,11 @@ import Layout from "./components/Layout";
 function App() {
   return (
     <div className="App">
-      <h1>hihi</h1>
-      <Layout />
+      <Layout>
+        <div className="full-width-image-container margin-top-0">
+          <h1 className="has-text-weight-bold is-size-1">Latest Stories</h1>
+        </div>
+      </Layout>
     </div>
   );
 }
