@@ -21,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   word-break: keep-all;
   background-color: $color-bg;
+
 }
 
 h1,
@@ -114,8 +115,8 @@ strong {
 }
 
 ul {
-  list-style: square;
-  @include margin-bottom(1);
+  list-style: none;
+
 
   & li {
     padding: 0 5px;

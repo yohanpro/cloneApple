@@ -14,7 +14,16 @@ const Navbar = class extends React.Component {
         className={styles.navbar__global}
         role="navigation"
         aria-label="main-navigation"
-      />
+      >
+        <div className={styles.navbar__global__content}>
+          <ul className={styles.navbar__global__header}>
+            <li className={styles["navbar-menuIcon"]}>
+              <span className={styles["navbar-menuIcon-top"]} />
+            </li>
+            <li className={styles["navbar-menuIcon-apple"]} />
+          </ul>
+        </div>
+      </nav>
     );
   }
 };
