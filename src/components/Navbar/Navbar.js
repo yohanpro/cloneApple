@@ -6,7 +6,9 @@ const Navbar = class extends React.Component {
     super(props);
     this.state = {};
   }
-
+  changeMeunIcon() {
+    console.log(this);
+  }
   render() {
     return (
       <nav
@@ -15,14 +17,21 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className={styles.navbar__global__content}>
-          <ul className={styles.navbar__global__header}>
-            <li className={styles["navbar-menuIcon"]}>
-              <span className={styles["navbar-menuIcon-top"]} />
-            </li>
-            <li className={styles["navbar-menuIcon-apple"]} />
-          </ul>
-        </div>
+        <ul className={styles["navbar__global-content"]}>
+          <li
+            className={styles.navbar__menuIcon}
+            onClick={e => this.changeMeunIcon(e)}
+          >
+            <div className={styles["menuIcon-top"]} />
+            <div className={styles["menuIcon-bottom"]} />
+          </li>
+          <li className={styles.navbar__appleIcon}>
+            <a />
+          </li>
+          <li className={styles.navbar__shopIcon}>
+            <a />
+          </li>
+        </ul>
       </nav>
     );
   }
