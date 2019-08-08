@@ -15,6 +15,7 @@
   max-height: 48px;
   font-size: 17px;
   background-color: rgba(0, 0, 0, 0.8);
+
   &-content {
     width: 100%;
     height: 100%;
@@ -25,32 +26,7 @@
     padding: 0;
   }
 }
-.navbar__menuIcon {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  position: relative;
-  & > .menuIcon-top {
-    width: 40%;
-    height: 2px;
-    background: #fff;
-    background-size: 100%;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  & > .menuIcon-bottom {
-    width: 40%;
-    height: 2px;
-    background: #fff;
-    background-size: 100%;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+
 
 .navbar__appleIcon {
   width: 48px;
@@ -58,7 +34,7 @@
   display: inline-block;
   position: relative;
 
-  & > a {
+  &>a {
     width: 20px;
     height: 100%;
     background: url("../../assets/images/icons/icon-apple_large.svg") no-repeat;
@@ -75,7 +51,8 @@
   height: 48px;
   display: inline-block;
   position: relative;
-  & > a {
+
+  &>a {
     width: 38%;
     max-width: 17px;
     height: 100%;
