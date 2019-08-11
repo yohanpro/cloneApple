@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.scss";
 import classnames from "classnames";
+import NavList from "./NavList/NavList";
 
 const Navbar = () => {
   let [expanded, setMenuState] = useState(false);
   const changeMeunIcon = e => {
-    expanded = !expanded;
+    expanded = !expanded; //만약 현재 상태와 다르다면 다른 값을 hook에 넣어준다.
     setMenuState(expanded);
   };
   return (
@@ -29,6 +30,7 @@ const Navbar = () => {
           <a />
         </li>
       </ul>
+      <NavList />
     </nav>
   );
 };
