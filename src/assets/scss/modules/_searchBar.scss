@@ -1,0 +1,31 @@
+.SearchBar {
+    width: 100%;
+    height: 50px;
+    border-bottom: .5px solid rgba(128, 128, 128, 0.7);
+    background: rgba(0, 0, 0, 0.8);
+    align-content: center;
+    position: absolute;
+
+    &__searchArea {
+        width: 92%;
+        height: 70%;
+        background-color: rgb(40, 40, 40);
+        position: absolute;
+        border-radius: 4px;
+        padding-top: 2px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    &-icon-search {
+        width: 25px;
+        height: 100%;
+        // background-image: url('../../images/icons/icon-search.svg') no-repeat;
+        // background-size: 100%;
+    }
+}

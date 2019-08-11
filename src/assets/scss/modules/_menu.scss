@@ -4,7 +4,7 @@
   display: inline-block;
   position: relative;
 
-  & > .menuIcon-top {
+  &>.menuIcon-top {
     width: 40%;
     height: 2px;
     background: #fff;
@@ -21,7 +21,7 @@
     }
   }
 
-  & > .menuIcon-bottom {
+  &>.menuIcon-bottom {
     width: 40%;
     height: 2px;
     background: #fff;
@@ -37,7 +37,4 @@
       transform: rotate(-40deg) scaleX(1.2) translate(-10px, -7px);
     }
   }
-}
-
-.menuIcon--changeToX {
 }

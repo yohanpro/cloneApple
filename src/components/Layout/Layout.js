@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import styles from "./Layout.module.scss";
 import Navbar from "../Navbar";
 
 const Layout = ({ children, title, description }: Props) => (
