@@ -17,7 +17,7 @@
     transition: transform 0.3s ease-out;
 
     &.expanded {
-      transform: rotate(40deg) scaleX(1.2) translate(-12px, 6px);
+      transform: rotate(40deg) scaleX(1.2) translate(-12px, 4px);
     }
   }
 
@@ -34,7 +34,7 @@
     transition: transform 0.3s ease-out;
 
     &.expanded {
-      transform: rotate(-40deg) scaleX(1.2) translate(-10px, -7px);
+      transform: rotate(-40deg) scaleX(1.2) translate(-8px, -7px);
     }
   }
 }

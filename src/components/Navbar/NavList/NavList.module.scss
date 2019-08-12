@@ -7,6 +7,7 @@
     position: sticky;
     z-index: 10;
     color: #fff;
+    background: rgba(0, 0, 0, 0.7);
 
     &__wrapper {
         width: 85%;
@@ -14,6 +15,20 @@
         display: flex;
         background: rgba(0, 0, 0, 0.7);
         margin: 0 auto;
+
+        &>ul {
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+            padding-top: 10px;
+            padding-left: 0;
+
+            &>li {
+                border-bottom: 1px solid #282828;
+                height: 44px;
+                line-height: 282%;
+            }
+        }
     }
 
 }
