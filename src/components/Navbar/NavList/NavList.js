@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./NavList.module.scss";
 import SearchBar from "../../SearchBar/SearchBar";
+import classnames from "classnames";
 
 const NavList = () => {
+  const [product] = useState([
+    {
+      index: 1,
+      name: "Mac"
+    },
+    {
+      index: 2,
+      name: "iPad"
+    },
+    {
+      index: 3,
+      name: "iPhone"
+    },
+    {
+      index: 4,
+      name: "Watch"
+    },
+    {
+      index: 5,
+      name: "Music"
+    },
+    {
+      index: 6,
+      name: "고객지원"
+    }
+  ]);
   return (
     <div className={styles["NavList-container"]}>
       <SearchBar />
-      <div className={styles["NavList-container__wrapper"]}>
+      <div className={classnames(styles["NavList-container__wrapper"], "abc")}>
         <ul>
-          <li>Mac</li>
-          <li>iPad</li>
-          <li>iPhone</li>
-          <li>Watch</li>
-          <li>Music</li>
-          <li>고객지원</li>
+          {product.map(el => {
+            return <li>{el.name}</li>;
+          })}
         </ul>
       </div>
     </div>

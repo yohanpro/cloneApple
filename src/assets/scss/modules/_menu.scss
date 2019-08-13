@@ -6,7 +6,7 @@
 
   &>.menuIcon-top {
     width: 40%;
-    height: 2px;
+    height: 1px;
     background: #fff;
     background-size: 100%;
     position: absolute;
@@ -17,13 +17,14 @@
     transition: transform 0.3s ease-out;
 
     &.expanded {
-      transform: rotate(40deg) scaleX(1.2) translate(-12px, 4px);
+      transform: rotate(45deg) scaleX(.9) translate(-5px, 5px);
+      ;
     }
   }
 
   &>.menuIcon-bottom {
     width: 40%;
-    height: 2px;
+    height: 1px;
     background: #fff;
     background-size: 100%;
     position: absolute;
@@ -34,7 +35,7 @@
     transition: transform 0.3s ease-out;
 
     &.expanded {
-      transform: rotate(-40deg) scaleX(1.2) translate(-8px, -7px);
+      transform: rotate(-45deg) scaleX(.9) translate(-8px, -1px);
     }
   }
 }

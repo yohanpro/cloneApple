@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import styles from "./Navbar.module.scss";
 import classnames from "classnames";
 import NavList from "./NavList/NavList";
 
 const Navbar = () => {
-  let [expanded, setMenuState] = useState(false);
-  const changeMeunIcon = e => {
-    expanded = !expanded; //만약 현재 상태와 다르다면 다른 값을 hook에 넣어준다.
-    setMenuState(expanded);
-  };
+  const [expanded, dispatch] = useReducer((state, action) => {
+    if (action === "toggle") {
+      state = !state;
+      return state;
+    }
+  }, false);
+
   return (
     <nav
       id="globalNav"
@@ -17,7 +19,10 @@ const Navbar = () => {
       aria-label="main-navigation"
     >
       <ul className={styles["navbar__global-content"]}>
-        <li className={classnames("menuIcon")} onClick={e => changeMeunIcon(e)}>
+        <li
+          className={classnames("menuIcon")}
+          onClick={e => dispatch("toggle")}
+        >
           <div className={classnames("menuIcon-top", { expanded: expanded })} />
           <div
             className={classnames("menuIcon-bottom", { expanded: expanded })}
