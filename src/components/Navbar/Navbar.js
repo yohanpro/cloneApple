@@ -3,6 +3,8 @@ import styles from "./Navbar.module.scss";
 import classnames from "classnames";
 import NavList from "./NavList/NavList";
 
+
+const MyContext = React.createContext()
 const Navbar = () => {
   const [expanded, dispatch] = useReducer((state, action) => {
     if (action === "toggle") {

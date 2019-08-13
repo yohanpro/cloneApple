@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useReducer } from "react";
 import styles from "./NavList.module.scss";
 import SearchBar from "../../SearchBar/SearchBar";
 import classnames from "classnames";
 
 const NavList = () => {
+
+  const [expanded] = useReducer()
   const [product] = useState([
     {
       index: 1,
