@@ -3,42 +3,45 @@ import styles from "./Navbar.module.scss";
 import classnames from "classnames";
 import NavList from "./NavList/NavList";
 
-
-const MyContext = React.createContext()
+function reducer() {}
 const Navbar = () => {
   const [expanded, dispatch] = useReducer((state, action) => {
-    if (action === "toggle") {
+    if (action.type === "menuExpand") {
       state = !state;
       return state;
     }
   }, false);
-
+  const StateContext = React.createContext();
   return (
-    <nav
-      id="globalNav"
-      className={styles.navbar__global}
-      role="navigation"
-      aria-label="main-navigation"
-    >
-      <ul className={styles["navbar__global-content"]}>
-        <li
-          className={classnames("menuIcon")}
-          onClick={e => dispatch("toggle")}
-        >
-          <div className={classnames("menuIcon-top", { expanded: expanded })} />
-          <div
-            className={classnames("menuIcon-bottom", { expanded: expanded })}
-          />
-        </li>
-        <li className={styles.navbar__appleIcon}>
-          <a />
-        </li>
-        <li className={styles.navbar__shopIcon}>
-          <a />
-        </li>
-      </ul>
-      <NavList />
-    </nav>
+    <StateContext.Provider value={expanded}>
+      <nav
+        id="globalNav"
+        className={styles.navbar__global}
+        role="navigation"
+        aria-label="main-navigation"
+      >
+        <ul className={styles["navbar__global-content"]}>
+          <li
+            className={classnames("menuIcon")}
+            onClick={e => dispatch({ type: "menuExpand" })}
+          >
+            <div
+              className={classnames("menuIcon-top", { expanded: expanded })}
+            />
+            <div
+              className={classnames("menuIcon-bottom", { expanded: expanded })}
+            />
+          </li>
+          <li className={styles.navbar__appleIcon}>
+            <a />
+          </li>
+          <li className={styles.navbar__shopIcon}>
+            <a />
+          </li>
+        </ul>
+        <NavList />
+      </nav>
+    </StateContext.Provider>
   );
 };
 

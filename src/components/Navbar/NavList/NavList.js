@@ -1,11 +1,10 @@
-import React, { useState,useReducer } from "react";
+import React, { useState, useReducer } from "react";
 import styles from "./NavList.module.scss";
 import SearchBar from "../../SearchBar/SearchBar";
 import classnames from "classnames";
 
 const NavList = () => {
-
-  const [expanded] = useReducer()
+  const [state, dispatch] = useReducer();
   const [product] = useState([
     {
       index: 1,
@@ -35,10 +34,10 @@ const NavList = () => {
   return (
     <div className={styles["NavList-container"]}>
       <SearchBar />
-      <div className={classnames(styles["NavList-container__wrapper"], "abc")}>
+      <div className={classnames(styles["NavList-container__wrapper"])}>
         <ul>
           {product.map(el => {
-            return <li>{el.name}</li>;
+            return <li key={el.index}>{el.name}</li>;
           })}
         </ul>
       </div>
