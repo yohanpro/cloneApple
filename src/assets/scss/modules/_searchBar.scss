@@ -30,10 +30,24 @@
     background-size: 25px 35px;
     display: inline-block;
   }
+
   &-typingArea {
     display: inline-block;
     height: 100%;
     line-height: 210%;
     color: #999;
   }
+}
+
+.NavList-container {
+  transform: scaleY(0);
+  visibility: hidden;
+  transform-origin: top center;
+  transition: all .4s ease-out;
+}
+
+.NavList-container.expanded {
+  transform: scaleY(1);
+  visibility: visible;
+  transition: all .4s ease-out;
 }

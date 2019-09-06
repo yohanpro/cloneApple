@@ -2,33 +2,37 @@
 @import "../../../assets/scss/variables";
 
 .NavList-container {
-    width: 100%;
-    height: auto;
-    position: sticky;
-    z-index: 10;
-    color: #fff;
+  width: 100%;
+  height: auto;
+  position: sticky;
+  z-index: 10;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+
+  &__wrapper {
+    width: 85%;
+    height: calc(100vh - 50px);
+    display: flex;
     background: rgba(0, 0, 0, 0.7);
-    overflow: hidden;
+    margin: 0 auto;
 
-    &__wrapper {
-        width: 85%;
-        height: calc(100vh - 50px);
-        display: flex;
-        background: rgba(0, 0, 0, 0.7);
-        margin: 0 auto;
+    & > ul {
+      width: 100%;
+      height: 100%;
+      margin-top: 50px;
+      padding-top: 10px;
+      padding-left: 0;
 
-        &>ul {
-            width: 100%;
-            height: 100%;
-            margin-top: 50px;
-            padding-top: 10px;
-            padding-left: 0;
-
-            &>li {
-                border-bottom: 1px solid #282828;
-                height: 44px;
-                line-height: 280%;
-            }
-        }
+      & > li {
+        border-bottom: 1px solid #282828;
+        height: 44px;
+        line-height: 280%;
+      }
     }
+  }
+}
+
+.NavList-container.expanded {
+  display: none;
 }
