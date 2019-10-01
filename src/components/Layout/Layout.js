@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar";
+import Section from "../contents/Section/Section";
 
 const Layout = ({ children, title, description }: Props) => (
   <div>
@@ -13,6 +14,7 @@ const Layout = ({ children, title, description }: Props) => (
       <meta name="twitter:title" content={title} />
     </Helmet>
     <Navbar />
+    <Section />
   </div>
 );
 
