@@ -3,7 +3,7 @@ import img from "../../../assets/images/macbook.jpg";
 
 const Section = props => {
   return (
-    <section>
+    <section className="Section_1">
       <img src={img} alt="macbook" />
     </section>
   );

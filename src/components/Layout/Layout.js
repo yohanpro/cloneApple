@@ -14,6 +14,13 @@ const Layout = ({ children, title, description }: Props) => (
       <meta name="twitter:title" content={title} />
     </Helmet>
     <Navbar />
+    <p>
+      <h1>Macbook Pro</h1>
+    </p>
+    <Section />
+    <Section />
+    <Section />
+    <Section />
     <Section />
   </div>
 );
